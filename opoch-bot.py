@@ -6,8 +6,7 @@ API_KEY = "7BOxQ4GRgWKhp8OZ6LplpQ==dVuwsKPv3BVeWE0K"
 
 def get_opposite(word):
     api_url = f"https://api.api-ninjas.com/v1/thesaurus?word={word}"
-    headers = {"X-Api-Key": "7BOxQ4GRgWKhp8OZ6LplpQ==dVuwsKPv3BVeWE0K"}
-  # Use the API_KEY variable
+    headers = {"X-Api-Key": API_KEY}  # Use the API_KEY variable
     response = requests.get(api_url, headers=headers)
     if response.status_code == requests.codes.ok:
         data = json.loads(response.text)
